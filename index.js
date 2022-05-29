@@ -17,6 +17,10 @@ app.use(cors());
 // routing middleware
 app.use('/posts', postRoutes);
 
+app.use('/', (req, res) => {
+  return res.send('Welcome to memories API');
+});
+
 const port = process.env.PORT || 5000;
 
 mongoose
